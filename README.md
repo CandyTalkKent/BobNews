@@ -1,0 +1,21 @@
+# BobNews
+以下是工具版本
+    node v8.9.4
+    "antd": "^2.1.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "css-loader": "^0.25.0",
+    "json-loader": "^0.5.4",
+    "react": "^15.3.2",
+    "fetch": "^1.1.0",
+    "react-dom": "^15.3.2",
+    "react-mixin": "^2.0.2",
+    "react-responsive": "^1.2.1",
+    "react-router": "^2.8.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+    "babel-plugin-import": "^1.0.1"
