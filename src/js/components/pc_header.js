@@ -110,11 +110,11 @@ logout(){
     return (
       <header>
       <Row>
-           <Col span={1}></Col>
-           <Col span={4} class = "logo">
+           <Col span={2}></Col>
+           <Col span={3} class = "logo">
                  <a href="/" class="logo">
                      <img src="./src/images/logo.png" alt="logo"/>
-                     <span>ReactNews</span>
+                     <span>博哥新闻</span>
                 </a>
            </Col>
            <Col span={17}>
