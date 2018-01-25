@@ -13,14 +13,28 @@ import {
 	CheckBox,
 	Modal
 } from 'antd';
+
+import {Carousel} from 'antd';
 const TabPane = Tabs.TabPane;
 export default class MobileIndex extends React.Component {
   render(){
+				const settings = {
+					autoplay:true,
+					dots:true,
+					speed:500,
+					vertical : false
+				};
         return(
           <div>
             <MobileHeader></MobileHeader>
             <Tabs>
   					<TabPane tab="头条" key="1">
+						<Carousel {...settings}>
+							<div><img src="./src/images/carousel_1.jpg"/></div>
+							<div><img src="./src/images/carousel_2.jpg"/></div>
+							<div><img src="./src/images/carousel_3.jpg"/></div>
+							<div><img src="./src/images/carousel_4.jpg"/></div>
+						</Carousel>
 							<MobileNewsList count = {20} type="top"></MobileNewsList>
 						</TabPane>
   					<TabPane tab="社会" key="2">
