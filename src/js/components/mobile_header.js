@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
-import {Link,Router,Route} from 'react-router';
+;
+import {Link,Router,Route,browserHistory} from 'react-router';
 import {
 	Menu,
 	Icon,
@@ -11,7 +12,8 @@ import {
 	Input,
 	Button,
 	CheckBox,
-	Modal
+	Modal,
+	notification
 } from 'antd';
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
@@ -89,16 +91,30 @@ logout(){
 	localStorage.userNickName = '';
 	localStorage.userid = '';
 	this.setState({hasLogined : false});
+	console.log("browserHistory start !!!");
+	 browserHistory.push("/");
+	 console.log("browserHistory end!!! !!!");
+	notification.open({
+	 message: '用户通知',
+	 description: '退出登录成功',
+ });
 }
 
 render() {
 	let {getFieldDecorator} = this.props.form;
 	const userShow = this.state.hasLogined ?
-		<Icon type="poweroff" onClick = {this.logout.bind(this)}/>
+				<span>
+					<Icon type="poweroff" onClick ={this.logout.bind(this)} />
+					&nbsp;
+					<Link to={`/usercenter`}>
+						<Icon type="inbox" />
+					</Link>
+				</span>
 	:
 	<Icon type="smile" onClick={this.login.bind(this)}/>
 		return (
       <div id="mobileheader">
+
         <header>
           <img src="./src/images/logo.png" alt="logo"/>
           <span>ReactNews</span>

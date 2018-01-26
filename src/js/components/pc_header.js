@@ -96,11 +96,11 @@ logout(){
 			? <Menu.Item key="logout" class="register">
 					<nobr>
 					<Button type="primary" htmlType="button">{this.state.userNickName}</Button>
-					&nbsp;&nbsp;
-					<Link target="_blank">
+					&nbsp;
+					<Link target="_blank" to={`/usercenter`}>
 						<Button type="dashed" htmlType="button">个人中心</Button>
 					</Link>
-					&nbsp;&nbsp;
+					&nbsp;
 					<Button type="ghost" htmlType="button" onClick = {this.logout.bind(this)}>退出</Button>
 					</nobr>
 				</Menu.Item>
@@ -114,7 +114,7 @@ logout(){
            <Col span={3} class = "logo">
                  <a href="/" class="logo">
                      <img src="./src/images/logo.png" alt="logo"/>
-                     <span>博哥新闻</span>
+                     <span>博新闻</span>
                 </a>
            </Col>
            <Col span={17}>
